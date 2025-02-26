@@ -49,6 +49,24 @@ use crate::handler::bellkks::bellkks06handler::{
     get_stacode_bellkks06_handler,
 };
 
+use crate::handler::bellkks::bellkks07handler::{
+    bellkks07_list_handler,
+    get_bellkks07_handler,
+    get_stacode_bellkks07_handler,
+};
+
+use crate::handler::bellkks::bellkks08handler::{
+    bellkks08_list_handler,
+    get_bellkks08_handler,
+    get_stacode_bellkks08_handler,
+};
+
+use crate::handler::bellkks::bellkks09handler::{
+    bellkks09_list_handler,
+    get_bellkks09_handler,
+    get_stacode_bellkks09_handler,
+};
+
 pub fn create_router(app_state: Arc<AppState>) -> Router {
     Router::new()
         .route("/api/healthchecker", get(health_checker_handler))
@@ -70,5 +88,14 @@ pub fn create_router(app_state: Arc<AppState>) -> Router {
         .route("/api/bellkks/bellkks06", get(bellkks06_list_handler))
         .route("/api/bellkks/bellkks06/:id", get(get_bellkks06_handler))
         .route("/api/bellkks/bellkks06/stacode/:sta_code", get(get_stacode_bellkks06_handler))
+        .route("/api/bellkks/bellkks07", get(bellkks07_list_handler))
+        .route("/api/bellkks/bellkks07/:id", get(get_bellkks07_handler))
+        .route("/api/bellkks/bellkks07/stacode/:sta_code", get(get_stacode_bellkks07_handler))
+        .route("/api/bellkks/bellkks08", get(bellkks08_list_handler))
+        .route("/api/bellkks/bellkks08/:id", get(get_bellkks08_handler))
+        .route("/api/bellkks/bellkks08/stacode/:sta_code", get(get_stacode_bellkks08_handler))
+        .route("/api/bellkks/bellkks09", get(bellkks09_list_handler))
+        .route("/api/bellkks/bellkks09/:id", get(get_bellkks09_handler))
+        .route("/api/bellkks/bellkks09/stacode/:sta_code", get(get_stacode_bellkks09_handler))
         .with_state(app_state)
 }
