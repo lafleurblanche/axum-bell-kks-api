@@ -20,7 +20,7 @@ pub async fn bellkks02_list_handler(
 ) -> Result<impl IntoResponse, (StatusCode, Json<serde_json::Value>)> {
     let Query(opts) = opts.unwrap_or_default();
 
-    let limit = opts.limit.unwrap_or(10);
+    let limit = opts.limit.unwrap_or(30);
     let offset = (opts.page.unwrap_or(1) - 1) * limit;
 
     let query_result = sqlx::query_as!(
