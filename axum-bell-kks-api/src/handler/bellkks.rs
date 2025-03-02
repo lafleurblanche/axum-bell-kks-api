@@ -7,3 +7,4 @@ pub mod bellkks06handler;
 pub mod bellkks07handler;
 pub mod bellkks08handler;
 pub mod bellkks09handler;
+pub mod bellkks10handler;
