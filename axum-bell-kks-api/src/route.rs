@@ -73,6 +73,30 @@ use crate::handler::bellkks::bellkks10handler::{
     get_stacode_bellkks10_handler,
 };
 
+use crate::handler::bellkks::bellkks11handler::{
+    bellkks11_list_handler,
+    get_bellkks11_handler,
+    get_stacode_bellkks11_handler,
+};
+
+use crate::handler::bellkks::bellkks12handler::{
+    bellkks12_list_handler,
+    get_bellkks12_handler,
+    get_stacode_bellkks12_handler,
+};
+
+use crate::handler::bellkks::bellkks13handler::{
+    bellkks13_list_handler,
+    get_bellkks13_handler,
+    get_stacode_bellkks13_handler,
+};
+
+use crate::handler::bellkks::bellkks14handler::{
+    bellkks14_list_handler,
+    get_bellkks14_handler,
+    get_stacode_bellkks14_handler,
+};
+
 pub fn create_router(app_state: Arc<AppState>) -> Router {
     Router::new()
         .route("/api/healthchecker", get(health_checker_handler))
@@ -106,5 +130,17 @@ pub fn create_router(app_state: Arc<AppState>) -> Router {
         .route("/api/bellkks/bellkks10", get(bellkks10_list_handler))
         .route("/api/bellkks/bellkks10/:id", get(get_bellkks10_handler))
         .route("/api/bellkks/bellkks10/stacode/:sta_code", get(get_stacode_bellkks10_handler))
+        .route("/api/bellkks/bellkks11", get(bellkks11_list_handler))
+        .route("/api/bellkks/bellkks11/:id", get(get_bellkks11_handler))
+        .route("/api/bellkks/bellkks11/stacode/:sta_code", get(get_stacode_bellkks11_handler))
+        .route("/api/bellkks/bellkks12", get(bellkks12_list_handler))
+        .route("/api/bellkks/bellkks12/:id", get(get_bellkks12_handler))
+        .route("/api/bellkks/bellkks12/stacode/:sta_code", get(get_stacode_bellkks12_handler))
+        .route("/api/bellkks/bellkks13", get(bellkks13_list_handler))
+        .route("/api/bellkks/bellkks13/:id", get(get_bellkks13_handler))
+        .route("/api/bellkks/bellkks13/stacode/:sta_code", get(get_stacode_bellkks13_handler))
+        .route("/api/bellkks/bellkks14", get(bellkks14_list_handler))
+        .route("/api/bellkks/bellkks14/:id", get(get_bellkks14_handler))
+        .route("/api/bellkks/bellkks14/stacode/:sta_code", get(get_stacode_bellkks14_handler))
         .with_state(app_state)
 }
