@@ -15,3 +15,5 @@ pub mod bellkks14handler;
 pub mod bellkks15handler;
 pub mod bellkks16handler;
 pub mod bellkks17handler;
+pub mod bellkks18handler;
+pub mod bellkks19handler;
