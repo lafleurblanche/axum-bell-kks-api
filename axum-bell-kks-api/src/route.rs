@@ -13,120 +13,27 @@ use crate::handler::health::healthhandler::{
     health_checker_handler,
 };
 
-use crate::handler::bellkks::bellkks01handler::{
-    bellkks01_list_handler,
-    get_bellkks01_handler,
-    get_stacode_bellkks01_handler,
+use crate::handler::bellkks::{
+    bellkks01handler::{bellkks01_list_handler, get_bellkks01_handler, get_stacode_bellkks01_handler},
+    bellkks02handler::{bellkks02_list_handler, get_bellkks02_handler, get_stacode_bellkks02_handler},
+    bellkks03handler::{bellkks03_list_handler, get_bellkks03_handler, get_stacode_bellkks03_handler},
+    bellkks04handler::{bellkks04_list_handler, get_bellkks04_handler, get_stacode_bellkks04_handler},
+    bellkks05handler::{bellkks05_list_handler, get_bellkks05_handler, get_stacode_bellkks05_handler},
+    bellkks06handler::{bellkks06_list_handler, get_bellkks06_handler, get_stacode_bellkks06_handler},
+    bellkks07handler::{bellkks07_list_handler, get_bellkks07_handler, get_stacode_bellkks07_handler},
+    bellkks08handler::{bellkks08_list_handler, get_bellkks08_handler, get_stacode_bellkks08_handler},
+    bellkks09handler::{bellkks09_list_handler, get_bellkks09_handler, get_stacode_bellkks09_handler},
+    bellkks10handler::{bellkks10_list_handler, get_bellkks10_handler, get_stacode_bellkks10_handler},
+    bellkks11handler::{bellkks11_list_handler, get_bellkks11_handler, get_stacode_bellkks11_handler},
+    bellkks12handler::{bellkks12_list_handler, get_bellkks12_handler, get_stacode_bellkks12_handler},
+    bellkks13handler::{bellkks13_list_handler, get_bellkks13_handler, get_stacode_bellkks13_handler},
+    bellkks14handler::{bellkks14_list_handler, get_bellkks14_handler, get_stacode_bellkks14_handler},
+    bellkks15handler::{bellkks15_list_handler, get_bellkks15_handler, get_stacode_bellkks15_handler},
+    bellkks16handler::{bellkks16_list_handler, get_bellkks16_handler, get_stacode_bellkks16_handler},
+    bellkks17handler::{bellkks17_list_handler, get_bellkks17_handler, get_stacode_bellkks17_handler},
+    bellkks18handler::{bellkks18_list_handler, get_bellkks18_handler, get_stacode_bellkks18_handler},
+    bellkks19handler::{bellkks19_list_handler, get_bellkks19_handler, get_stacode_bellkks19_handler},
 };
-
-use crate::handler::bellkks::bellkks02handler::{
-    bellkks02_list_handler,
-    get_bellkks02_handler,
-    get_stacode_bellkks02_handler,
-};
-
-use crate::handler::bellkks::bellkks03handler::{
-    bellkks03_list_handler,
-    get_bellkks03_handler,
-    get_stacode_bellkks03_handler,
-};
-
-use crate::handler::bellkks::bellkks04handler::{
-    bellkks04_list_handler,
-    get_bellkks04_handler,
-    get_stacode_bellkks04_handler,
-};
-
-use crate::handler::bellkks::bellkks05handler::{
-    bellkks05_list_handler,
-    get_bellkks05_handler,
-    get_stacode_bellkks05_handler,
-};
-
-use crate::handler::bellkks::bellkks06handler::{
-    bellkks06_list_handler,
-    get_bellkks06_handler,
-    get_stacode_bellkks06_handler,
-};
-
-use crate::handler::bellkks::bellkks07handler::{
-    bellkks07_list_handler,
-    get_bellkks07_handler,
-    get_stacode_bellkks07_handler,
-};
-
-use crate::handler::bellkks::bellkks08handler::{
-    bellkks08_list_handler,
-    get_bellkks08_handler,
-    get_stacode_bellkks08_handler,
-};
-
-use crate::handler::bellkks::bellkks09handler::{
-    bellkks09_list_handler,
-    get_bellkks09_handler,
-    get_stacode_bellkks09_handler,
-};
-
-use crate::handler::bellkks::bellkks10handler::{
-    bellkks10_list_handler,
-    get_bellkks10_handler,
-    get_stacode_bellkks10_handler,
-};
-
-use crate::handler::bellkks::bellkks11handler::{
-    bellkks11_list_handler,
-    get_bellkks11_handler,
-    get_stacode_bellkks11_handler,
-};
-
-use crate::handler::bellkks::bellkks12handler::{
-    bellkks12_list_handler,
-    get_bellkks12_handler,
-    get_stacode_bellkks12_handler,
-};
-
-use crate::handler::bellkks::bellkks13handler::{
-    bellkks13_list_handler,
-    get_bellkks13_handler,
-    get_stacode_bellkks13_handler,
-};
-
-use crate::handler::bellkks::bellkks14handler::{
-    bellkks14_list_handler,
-    get_bellkks14_handler,
-    get_stacode_bellkks14_handler,
-};
-
-use crate::handler::bellkks::bellkks15handler::{
-    bellkks15_list_handler,
-    get_bellkks15_handler,
-    get_stacode_bellkks15_handler,
-};
-
-use crate::handler::bellkks::bellkks16handler::{
-    bellkks16_list_handler,
-    get_bellkks16_handler,
-    get_stacode_bellkks16_handler,
-};
-
-use crate::handler::bellkks::bellkks17handler::{
-    bellkks17_list_handler,
-    get_bellkks17_handler,
-    get_stacode_bellkks17_handler,
-};
-
-use crate::handler::bellkks::bellkks18handler::{
-    bellkks18_list_handler,
-    get_bellkks18_handler,
-    get_stacode_bellkks18_handler,
-};
-
-use crate::handler::bellkks::bellkks19handler::{
-    bellkks19_list_handler,
-    get_bellkks19_handler,
-    get_stacode_bellkks19_handler,
-};
-
 
 pub fn create_router(app_state: Arc<AppState>) -> Router {
     Router::new()
